@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        랜드로버
+    </title>
+    <style>
+        div.box_out {
+            text-align: center;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        div.box_in {
+            display: inline-block;
+            text-align: center;
+            width: 400px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        div.out {
+            text-align: center;
+        }
+
+        div.in {
+            display: inline-block;
+            text-align: center;
+        }
+
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        span {
+            font-size: 40px;
+        }
+    </style>
+    <script>
+		var car = new Array();
+		car[0] = "레인지로버이보크";
+        car[1] = "디스커버리스포츠";
+        car[2] = "레인지로버벨라";
+
+		function imagelist() {
+			for(var i=0; i<car.length; i++){
+				document.write("<div class='box_in'>");
+				document.write("<a href='" + car[i] + "소개.html'>");
+				document.write("<img src='" + car[i] + ".png' width='400px'");
+				document.write("<br>");
+				document.write("2019 랜드로버 " + car[i]);
+				document.write("</a>");
+				document.write("</div>");
+			}
+		}
+    </script>
+</head>
+<body>
+    <div class="out">
+        <div class="in">
+            <table>
+                <tr>
+                    <td>
+                        <image src="l_logo.png" width="60px">
+                    </td>
+                    <td>
+                        <span>랜드로버(land rover)</span>
+                    </td>
+                    <td>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    </td>
+                    <td>
+                        <a href="https://www.landroverkorea.co.kr/index.html">
+                            공식사이트
+                            <br>
+                            바로가기
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="box_out">
+        <script>
+			imagelist();
+        </script>
+    </div>
+</body>
+</html>

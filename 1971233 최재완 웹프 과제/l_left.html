@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Gaegu:300,400,700&display=swap&subset=korean');
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        details {
+            font-family: 'Gaegu', cursive;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    </style>
+    <script>
+        var car = new Array();
+        car[0] = "레인지로버이보크";
+        car[1] = "디스커버리스포츠";
+        car[2] = "레인지로버벨라";
+
+        var carsum = new Array();
+        carsum[0] = "소개";
+        carsum[1] = "제원";
+        carsum[2] = "사진";
+
+        function menu() {
+            for (var i = 0; i < car.length; i++) {
+                document.write("<details>");
+                document.write("<summary>")
+                document.write(car[i]);
+                document.write("</summary>");
+                for (var j = 0; j < carsum.length; j++) {
+                    document.write("<a href=" + car[i] + carsum[j] + ".html target='l_right'>");
+                    document.write(carsum[j]);
+                    document.write("</a>");
+                    document.write("<br>");
+                }
+                document.write("</details>");
+                document.write("<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <br>
+    <script>
+        menu();
+    </script>
+</body>
+</html>

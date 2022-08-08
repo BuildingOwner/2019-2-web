@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div.out {
+            text-align: center;
+        }
+
+        div.in {
+            display: inline-block;
+            text-align: center;
+        }
+
+        span {
+            font-size: 100px;
+        }
+    </style>
+
+    <script>
+        var files = ["l2_out1.png",
+            "l2_out2.png",
+            "l2_out3.png"
+        ];
+
+        var imgs = new Array();
+        for (var i = 0; i < files.length; i++) {
+            imgs[i] = new Image();
+            imgs[i].src = files[i];
+        }
+
+        var files2 = ["l2_in1.png",
+            "l2_in2.png",
+            "l2_in3.png"
+        ];
+
+        var imgs2 = new Array();
+        for (var i = 0; i < files2.length; i++) {
+            imgs2[i] = new Image();
+            imgs2[i].src = files2[i];
+        }
+
+        var next = 1;
+        function change(img) {
+            img.src = imgs[next].src;
+            next++;
+            next %= imgs.length;
+        }
+        function change2(img) {
+            --next;
+            if (next == -1) {
+                next = imgs.length
+                img.src = imgs[3].src;
+            }
+            else {
+                img.src = imgs[next].src;
+            }
+        }
+        function change3(img) {
+            img2.src = imgs2[next].src;
+            next++;
+            next %= imgs2.length;
+        }
+        function change4(img) {
+            --next;
+            if (next == -1) {
+                next = imgs2.length
+                img2.src = imgs2[3].src;
+            }
+            else {
+                img2.src = imgs2[next].src;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="out">
+        <div class="in">
+            <h3>
+                외관
+            </h3>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <span onclick="change2(img)">
+                            <
+                        </span>
+                    </td>
+                    <td>
+                        <image src="l2_out1.png" alt="." width="700" name="img">
+                    </td>
+                    <td>
+                        <span onclick="change(img)">
+                            >
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="out">
+        <div class="in">
+            <h3>
+                내부
+            </h3>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <span onclick="change4(img2)">
+                            <
+                        </span>
+                    </td>
+                    <td>
+                        <image src="l2_in1.png" alt="." width="700" name="img2">
+                    </td>
+                    <td>
+                        <span onclick="change3(img2)">
+                            >
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

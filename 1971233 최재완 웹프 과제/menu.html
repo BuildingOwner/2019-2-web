@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap&subset=korean" rel="stylesheet">
+	<style>
+		#menu ul {
+			margin : 0;
+			padding : 0px;
+			width : 100%;
+			text-align : center;
+		}
+		#menu ul li {
+			display : inline;
+			list-style-type : none;
+			padding : 0px 30px;
+			font-family: Comic Sans MS;
+		}
+		#menu ul li a {
+			color : black;
+			text-decoration : none;
+			font-size : 40px;
+			font-family: 'Nanum Pen Script', cursive;
+		}
+		#menu ul li a:hover {
+			color : blue;
+		}
+	</style>
+	<script>
+		var car = new Array();
+		car[0] = "포르쉐";
+		car[1] = "페라리";
+		car[2] = "랜드로버";
+		car[3] = "마세라티";
+		function menu() {
+            for (var i = 0; i <= 3; i++){
+				document.write("<li>");
+				document.write("<a href=" + car[i] +".html target='bottom'>");
+				document.write(car[i]);
+				document.write("</a>");
+				document.write("</li>");
+			}
+		}
+	</script>
+</head>
+<body>
+	<nav id="menu">
+		<ul>
+			<script>
+					menu();
+			</script>
+		</ul>
+	</nav>
+</body>
+</html>

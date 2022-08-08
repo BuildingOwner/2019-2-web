@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		포르쉐
+	</title>
+	<style>
+		div.box_out {
+			text-align : center;
+			padding : 10px;
+		}
+		a {
+			text-decoration : none;
+			color : black;
+		}
+		div.box_in {
+			display :inline-block;
+			text-align : center;
+			width : 400px;
+			padding : 10px;
+			font-size : 20px;
+		}
+		div.out {
+			text-align : center;
+		}
+		div.in {
+			display : inline-block;
+			text-align : center;
+		}
+		td {
+			padding : 5px;
+			text-align : center;
+		}
+		span {
+			font-size : 40px;
+		}
+	</style>
+	<script>
+		var car = new Array();
+		car[0] = "파나메라";
+		car[1] = "카이엔";
+		car[2] = "911 카레라";
+
+		function imagelist() {
+			for(var i=0; i<car.length; i++){
+				document.write("<div class='box_in'>");
+				document.write("<a href='" + car[i] + "소개.html'>");
+				document.write("<img src='" + car[i] + ".png' width='400px'");
+				document.write("<br>");
+				document.write("2019 포르쉐 " + car[i]);
+				document.write("</a>");
+				document.write("</div>");
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="out">
+		<div class="in">
+			<table>
+				<tr>
+					<td>
+						<image src="p_logo.png" width="60px">
+					</td>
+					<td>
+						<span>포르쉐(porcshe)</span>
+					</td>
+					<td>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					</td>
+					<td>
+						<a href="https://www.porsche.com/korea/ko/">
+							공식사이트
+							<br>
+							바로가기
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>		
+	<div class="box_out">	
+		<script>
+			imagelist();
+		</script>
+	</div>
+</body>
+</html>
